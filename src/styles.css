@@ -42,7 +42,6 @@
   --radius: 0.875rem;
   /* Luxury light theme — warm ivory with gold accents */
   --background: oklch(0.985 0.005 85);      /* warm ivory */
-  --foreground: oklch(0.२0 0.01 60);
   --foreground: oklch(0.20 0.01 60);        /* deep warm charcoal */
   --card: oklch(1 0 0);                     /* pure white surfaces */
   --card-foreground: oklch(0.20 0.01 60);
