@@ -75,7 +75,7 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 pt-32 pb-20">
           <div className="max-w-3xl text-white">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs uppercase tracking-[0.2em] text-gold">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs uppercase tracking-[0.2em] text-gold">
               <Sparkles className="size-3.5" /> Lighting Fixtures & Beyond
             </div>
             <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight text-white">
