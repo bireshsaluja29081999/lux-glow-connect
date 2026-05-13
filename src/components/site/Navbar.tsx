@@ -29,7 +29,7 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display text-2xl md:text-3xl font-bold tracking-tight">
+          <span className={`font-display text-2xl md:text-3xl font-bold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
             Bellus
           </span>
           <span className="hidden sm:inline text-[10px] uppercase tracking-[0.25em] text-gold mt-2">
@@ -42,7 +42,7 @@ export function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth"
+              className={`text-sm font-medium transition-smooth ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"}`}
               activeProps={{ className: "text-gold" }}
               activeOptions={{ exact: l.to === "/" }}
             >
