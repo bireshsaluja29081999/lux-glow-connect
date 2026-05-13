@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { telLink, PHONE_PRIMARY_TEL } from "@/lib/contact";
@@ -13,6 +13,9 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  // Only the home page has a full-bleed dark hero behind the transparent navbar.
+  const overHero = pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -24,12 +27,12 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-        scrolled ? "glass-strong" : "bg-transparent"
+        overHero ? "bg-transparent" : "glass-strong"
       }`}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display text-2xl md:text-3xl font-bold tracking-tight">
+          <span className={`font-display text-2xl md:text-3xl font-bold tracking-tight ${overHero ? "text-white" : "text-foreground"}`}>
             Bellus
           </span>
           <span className="hidden sm:inline text-[10px] uppercase tracking-[0.25em] text-gold mt-2">
@@ -42,7 +45,7 @@ export function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth"
+              className={`text-sm font-medium transition-smooth ${overHero ? "text-white/80 hover:text-white" : "text-muted-foreground hover:text-foreground"}`}
               activeProps={{ className: "text-gold" }}
               activeOptions={{ exact: l.to === "/" }}
             >

@@ -70,25 +70,25 @@ function HomePage() {
           height={1080}
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
 
         <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 pt-32 pb-20">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs uppercase tracking-[0.2em] text-gold">
+          <div className="max-w-3xl text-white">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs uppercase tracking-[0.2em] text-gold">
               <Sparkles className="size-3.5" /> Lighting Fixtures & Beyond
             </div>
-            <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight">
+            <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight text-white">
               Transform Your Space With{" "}
               <span className="gradient-text-gold">Premium Lighting</span> Solutions
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl">
+            <p className="mt-6 text-base sm:text-lg text-white/85 max-w-2xl">
               Modern · Architectural · Decorative · Smart Lighting — designed by experts and installed beautifully.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-2">
               {["Free Visit", "Free Consultation", "Free Lighting Layouts"].map((b) => (
-                <span key={b} className="px-3 py-1.5 rounded-full glass text-xs font-medium text-foreground">
+                <span key={b} className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-medium text-white">
                   ✦ {b}
                 </span>
               ))}
@@ -111,7 +111,7 @@ function HomePage() {
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-muted-foreground">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-white/80">
               <a href={telLink(PHONE_PRIMARY_TEL)} className="hover:text-gold transition-smooth">{PHONE_PRIMARY}</a>
               <a href={`tel:+916392730761`} className="hover:text-gold transition-smooth">{PHONE_SECONDARY}</a>
             </div>
